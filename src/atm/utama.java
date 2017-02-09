@@ -1,3 +1,7 @@
+package atm;
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +13,7 @@
  * @author faizaaulia
  */
 public class utama extends javax.swing.JFrame {
-
+int t,s,tab=50000;
     /**
      * Creates new form utama
      */
@@ -51,7 +55,7 @@ public class utama extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("PIN");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(160, 120, 80, 40);
+        jLabel2.setBounds(70, 100, 80, 40);
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -62,18 +66,39 @@ public class utama extends javax.swing.JFrame {
 
         tfPin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(tfPin);
-        tfPin.setBounds(150, 160, 110, 30);
+        tfPin.setBounds(150, 110, 110, 30);
 
         jbEnter.setText("CONFIRM");
+        jbEnter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEnterActionPerformed(evt);
+            }
+        });
         jPanel1.add(jbEnter);
-        jbEnter.setBounds(150, 210, 110, 30);
+        jbEnter.setBounds(150, 160, 110, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 400, 300);
+        jPanel1.setBounds(0, 0, 400, 210);
 
-        setSize(new java.awt.Dimension(416, 339));
+        setSize(new java.awt.Dimension(416, 249));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEnterActionPerformed
+       int Pin;
+       int pin=1234;
+       
+       Pin = Integer.parseInt(tfPin.getText().toString());
+       if (Pin == pin)
+       {
+           this.setVisible(false);
+           new menu().setVisible(true);
+       }
+       else if ( Pin != pin)
+       {
+           JOptionPane.showMessageDialog(null, "Masukkan PIN dengan benar!");
+       }
+    }//GEN-LAST:event_jbEnterActionPerformed
 
     /**
      * @param args the command line arguments

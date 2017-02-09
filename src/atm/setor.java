@@ -1,7 +1,13 @@
+package atm;
+
 import javax.swing.JOptionPane;
 
+/**
+ *
+ * @author faizaaulia
+ */
 public class setor {
-     private int saldo;
+    private int saldo;
     public void menabung (int tab, int s)
     {
         if(s%100!=0)

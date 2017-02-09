@@ -1,4 +1,11 @@
+package atm;
+
 import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author faizaaulia
+ */
 
 public class tarik {
     private int saldo;
