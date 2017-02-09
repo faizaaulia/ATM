@@ -4,13 +4,20 @@
  * and open the template in the editor.
  */
 package atm;
+import javax.swing.JOptionPane;
+import atm.setor;
+import atm.tarik;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author faizaaulia
  */
 public class menu extends javax.swing.JFrame {
-
+        String str, str1;
+        int choice, z, pin = 1234, counter = 0, a = 3;
+        int t, s, tab = 50000;
+        
     /**
      * Creates new form menu
      */
